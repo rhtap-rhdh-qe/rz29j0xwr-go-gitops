@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rz29j0xwr-go-gitops
+  description: This is GitOps manifest for rz29j0xwr-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: rz29j0xwr-go
+    janus-idp.io/tekton: rz29j0xwr-go
+    backstage.io/kubernetes-id: rz29j0xwr-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:rz29j0xwr-go
